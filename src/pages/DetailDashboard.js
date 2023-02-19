@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import CardCommentComponent from '../components/CardCommentComponent'
 import NavbarComponent from '../components/NavbarComponent'
 
@@ -38,6 +38,9 @@ export default function DetailDashboardPage () {
       <div class='row height d-flex justify-content-center align-items-center'>
         <h3>Posts Detail Page</h3>
         <div class='col-md-8'>
+          <Link to={`/posts`}>
+            <i class='fa fa-arrow-left' aria-hidden='true'></i>
+          </Link>
           <div className='mt-5 mb-5'>
             <h2>{post.title}</h2>
             <p>{post.body}</p>

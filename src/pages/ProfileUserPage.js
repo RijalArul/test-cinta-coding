@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import NavbarComponent from '../components/NavbarComponent'
 
 export default function ProfileUserPage () {
@@ -26,6 +26,10 @@ export default function ProfileUserPage () {
     <div>
       <NavbarComponent />
       <div className='container'>
+        <Link to={`/posts`}>
+          <i class='fa fa-arrow-left' aria-hidden='true'></i>
+        </Link>
+
         <div class='row height d-flex justify-content-center align-items-center'>
           <h3>Detail Proile User Page</h3>
           <div class='col-md-8'>
